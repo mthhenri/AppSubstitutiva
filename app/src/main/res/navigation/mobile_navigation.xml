@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="br.edu.up.app.ui.produto.ProdutosFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_lista_produtos" >
+        <action
+            android:id="@+id/action_nav_home_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cliente"
+        android:name="br.edu.up.app.ui.cliente.ClientesFragment"
+        android:label="@string/menu_clientes"
+        tools:layout="@layout/fragment_lista_clientes" >
+        <action
+            android:id="@+id/action_nav_home_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/clienteFragment"
+        android:name="br.edu.up.app.ui.cliente.ClienteFragment"
+        android:label="Cadastro de clientes"
+        tools:layout="@layout/fragment_cliente" />
+
+    <fragment
+        android:id="@+id/produtoFragment"
+        android:name="br.edu.up.app.ui.produto.ProdutoFragment"
+        android:label="Cadastro de produtos"
+        tools:layout="@layout/fragment_produto" />
+
+</navigation>
